@@ -28,6 +28,14 @@ app.get('/all', (req, res) => {
     })
 })
 
+app.get('/', (req, res) => {
+    res.json({
+        message: "Welcome to this test-api",
+        get: "use /all",
+        post: "use /add"
+    })
+})
+
 app.listen(port, () => {
     console.log("Server is up on port " + port)
 })
